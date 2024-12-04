@@ -30,7 +30,19 @@ const makeProject = async (req, res) => {
     }
 };
 
+const getPortfolioPieces = async (req, res) => {
+    try {
+        const docs = await PortfolioPiece.find({}).lean().exec();
+
+        return res.json({ portfolioPieces: docs });
+    } catch (err) {
+        console.log(err);
+        return res.status(500).json({ error: 'Error retrieving project from database!' });
+    }
+}
+
 module.exports = {
     mainPage,
     makeProject,
+    getPortfolioPieces,
 }

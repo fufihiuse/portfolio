@@ -1,4 +1,3 @@
-const { id } = require('postcss-selector-parser');
 const React = require('react');
 const { useState, useEffect } = React;
 const { createRoot } = require('react-dom/client');
@@ -8,7 +7,7 @@ const PortfolioList = (props) => {
 
     useEffect(() => {
         const loadPortfolioPieces = async () => {
-            const response = await fetch('./getPortfolioPieces');
+            const response = await fetch('/getPortfolioPieces');
             const data = await response.json();
             setPortfolioPieces(data.portfolioPieces);
         };
@@ -29,10 +28,8 @@ const PortfolioList = (props) => {
                 <img src={'/assets/img/' + piece.imgPath} alt={"Picture of portfolio piece " + piece.title} className="projectPic" />
                 <h3 className='projectTitle'>{piece.title}</h3>
                 <h3 className='projectDesc'>{piece.description}</h3>
-                <form action={piece.link} method="get" target="_blank">
-                    <input type="submit">Check it Out</input>
-                </form>
-            </div>
+                <a href={piece.link} target="_blank">Check it Out</a>
+            </div >
         );
     });
 
@@ -57,4 +54,6 @@ const init = () => {
     const root = createRoot(document.querySelector('#app'));
 
     root.render(<App />)
-}
+};
+
+window.onload = init;
