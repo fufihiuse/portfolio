@@ -24,17 +24,17 @@ const PortfolioList = (props) => {
 
     const portfolioNodes = portfolioPieces.map(piece => {
         return (
-            <div key={piece.id} className='project'>
-                <img src={'/assets/img/' + piece.imgPath} alt={"Picture of portfolio piece " + piece.title} className="projectPic" />
-                <h3 className='projectTitle'>{piece.title}</h3>
+            <div key={piece.id} className='project flex flex-col w-1/4'>
+                <img src={'/assets/img/' + piece.imgPath} alt={"Picture of portfolio piece " + piece.title} className="projectPic w-1/16 rounded-lg" />
+                <h3 className='projectTitle text-3xl'>{piece.title}</h3>
                 <h3 className='projectDesc'>{piece.description}</h3>
-                <a href={piece.link} target="_blank">Check it Out</a>
+                <a href={piece.link} target="_blank" className='rounded-full bg-cyan-500 block'>Check it Out</a>
             </div >
         );
     });
 
     return (
-        <div className="projectList">
+        <div className="projectList grid grid-cols-2 place-items-center">
             {portfolioNodes}
         </div>
     );
@@ -42,10 +42,8 @@ const PortfolioList = (props) => {
 
 const App = () => {
     return (
-        <div>
-            <div id="projects">
-                <PortfolioList portfolioPieces={[]} />
-            </div>
+        <div id="projects">
+            <PortfolioList portfolioPieces={[]} />
         </div>
     )
 };
