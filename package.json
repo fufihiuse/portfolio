@@ -118,11 +118,11 @@
   "scripts": {
     "tailwind-compile": "npx tailwindcss -i ./server/tailwind/input.css -o ./hosted/style.css --watch",
     "start": "node ./server/app.js --watch",
-    "pretest": "eslint ./src --fix",
+    "pretest": "eslint ./server --fix",
     "test": "echo \"Tests complete\"",
     "webpack": "webpack",
     "webpackWatch": "webpack watch",
-    "nodemon": "nodemon -e js,html,css --watch ./server --watch ./hosted ./server/app.js"
+    "nodemon": "nodemon -e js,html,css,handlebars --watch ./server --watch ./hosted ./server/app.js"
   },
   "author": "Jackson Majewski",
   "license": "ISC",
