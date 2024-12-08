@@ -14,7 +14,7 @@
   },
   "name": "portfolio",
   "version": "1.0.0",
-  "main": "src/server.js",
+  "main": "./server/server.js",
   "dependencies": {
     "ansi-regex": "^6.1.0",
     "ansi-styles": "^6.2.1",
