@@ -20,7 +20,6 @@ module.exports = {
     watchOptions: {
         aggregateTimeout: 200,
     },
-    devtool: 'source-map',
     output: {
         path: path.resolve(__dirname, 'hosted'),
         filename: '[name]Bundle.js',
