@@ -17,7 +17,7 @@ const PortfolioList = (props) => {
 
     if (portfolioPieces.length === 0) {
         return (
-            // TODO: Update to show loading bar
+            // TODO: Update to show loading bar & style
             <div className='portfolioPieces'>
                 <h1>Loading...</h1>
             </div>
