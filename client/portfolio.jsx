@@ -47,7 +47,7 @@ const PortfolioList = (props) => {
 const App = () => {
     return (
         <div class="flex flex-row justify-center">
-            <div id="projects" class="max-w-[75vw]">
+            <div id="projects" class="lg:max-w-[75vw]">
                 <PortfolioList portfolioPieces={[]} />
             </div>
         </div>
