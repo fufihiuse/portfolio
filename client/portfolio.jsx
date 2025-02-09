@@ -19,7 +19,7 @@ const PortfolioList = (props) => {
         return (
             // TODO: Update to show loading bar
             <div className='portfolioPieces'>
-                <h1>Error retrieving data from server!</h1>
+                <h1>Loading...</h1>
             </div>
         );
     }
