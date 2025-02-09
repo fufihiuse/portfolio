@@ -12,10 +12,12 @@ const PortfolioList = (props) => {
             setPortfolioPieces(data.portfolioPieces);
         };
         loadPortfolioPieces();
-    });
+        console.log(portfolioPieces);
+    }, portfolioPieces);
 
     if (portfolioPieces.length === 0) {
         return (
+            // TODO: Update to show loading bar
             <div className='portfolioPieces'>
                 <h1>Error retrieving data from server!</h1>
             </div>
